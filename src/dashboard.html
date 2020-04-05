@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>SimpleAdmin</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="vendor/jasny-bootstrap/jasny-bootstrap.min.css" rel="stylesheet"/>
+    <link href="vendor/sweetalert2/sweetalert2.min.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav id="topnav" class="navbar topnav bg-brand">
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <a><img src="images/simpleAdmin-logo.svg" alt="logo"></a>
+            </div>
+        </nav>
+        <nav id="sidenav" class="sidenav disable-select">
+            <div class="sidenav-logo">
+                <a href="#">
+                    <img src="images/simpleAdmin-logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="sidenav-user-container">
+                <div class="sidenav-collapse" id="user-profile-collapse">
+                    <ul class="sidenav-user-profile">
+                        <li>
+                            <div class="link">
+                                <div class="sidenav-user-icon">
+                                    <img src="images/avatar.svg" alt="Dominik Janak">
+                                </div>
+                                <span class="username text-primary">Dominik Janák <i class="fas fa-chevron-down text-primary"></i></span>
+                            </div>
+                            <ul class="submenu">
+                                <li><a href="#"><i class="fas fa-user text-brand-light"></i> Profil</a></li>
+                                <li><a href="#"><i class="fas fa-wrench text-brand-light"></i> Nastavení</a></li>
+                                <li><a href="#"><i class="fas fa-question text-brand-light"></i> Nápověda</a></li>
+                                <li><a href="#"><i class="fas fa-sign-out-alt text-brand-light"></i> Odhlásit se</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidenav-collapse" id="sidenav-collapse">
+                <ul class="sidenav-menu">
+                    <li class="fast-action">
+                        <div class="btn-group">
+                            <a class="btn btn-primary">Nový uživatel</a>
+                            <a class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                <a class="dropdown-item">Nový dokument</a>
+                                <a class="dropdown-item">Nová šablona</a>
+                                <a class="dropdown-item">Dokument ze šablony</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Menu -->
+                    <li class="active">
+                        <a href="#">Hlavní strana</a>
+                    </li>
+                    <li>
+                        <div class="link">Aplikace<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="#">Citáty</a></li>
+                            <li><a href="#">Zkracovač odkazů</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Projekty</a>
+                    </li>
+                    <li>
+                        <a href="#">Uživatelé</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="shadow"></div>
+    </header>
+    <main role="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main-header-container disable-select">
+                        <div class="main-header">
+                            <h1>Dashboard</h1>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                <li class="breadcrumb-item active">Data</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-xl-3 carousel-panel">
+                    <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Investment</h4>
+                                <div class="dropdown dropleft">
+                                    <a class="btn btn-sm py-0 px-2" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu small">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            <div id="marketingA" class="carousel slide dashboard-widget-carousel position-static pt-2" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="title">
+                                            <h2>+115 751 Kč</h2>
+                                            <h3 class="text-success">+2.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil WTI</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="title">
+                                            <h2>-251 751 Kč</h2>
+                                            <h3 class="text-danger">-9.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil brant</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev-btn btn btn-light btn-sm py-1 px-2" href="#marketingA" role="button" data-slide="prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a class="carousel-control-next-btn btn btn-light btn-sm py-1 px-2" href="#marketingA" role="button" data-slide="next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-xl-3 carousel-panel">
+                    <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Commodities</h4>
+                                <div class="dropdown">
+                                    <a class="btn btn-sm py-0 px-2" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu small">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            <div id="marketingB" class="carousel slide dashboard-widget-carousel position-static pt-2" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="title">
+                                            <h2>+115 751 Kč</h2>
+                                            <h3 class="text-success">+2.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil WTI</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="title">
+                                            <h2>-251 751 Kč</h2>
+                                            <h3 class="text-danger">-9.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil brant</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev-btn btn btn-light btn-sm py-1 px-2" href="#marketingB" role="button" data-slide="prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a class="carousel-control-next-btn btn btn-light btn-sm py-1 px-2" href="#marketingB" role="button" data-slide="next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-xl-3 carousel-panel">
+                    <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Buildings</h4>
+                                <div class="dropdown dropleft">
+                                    <a class="btn btn-sm py-0 px-2" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu small">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            <div id="marketingC" class="carousel slide dashboard-widget-carousel position-static pt-2" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="title">
+                                            <h2>+115 751 Kč</h2>
+                                            <h3 class="text-success">+2.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil WTI</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="title">
+                                            <h2>-251 751 Kč</h2>
+                                            <h3 class="text-danger">-9.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil brant</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev-btn btn btn-light btn-sm py-1 px-2" href="#marketingC" role="button" data-slide="prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a class="carousel-control-next-btn btn btn-light btn-sm py-1 px-2" href="#marketingC" role="button" data-slide="next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-xl-3 carousel-panel">
+                    <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Transport</h4>
+                                <div class="dropdown dropleft">
+                                    <a class="btn btn-sm py-0 px-2" type="button" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu small">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            <div id="marketingD" class="carousel slide dashboard-widget-carousel position-static pt-2" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="title">
+                                            <h2>+115 751 Kč</h2>
+                                            <h3 class="text-success">+2.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil WTI</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="title">
+                                            <h2>-251 751 Kč</h2>
+                                            <h3 class="text-danger">-9.3%</h3>
+                                        </div>
+                                        <div class="info">
+                                            <p class="text-muted"><strong>Oil brant</strong> (2K last month)</p>
+                                        </div>
+                                        <a class="btn btn-light btn-sm py-1 px-2"><i class="far fa-eye"></i> Detail</a>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev-btn btn btn-light btn-sm py-1 px-2" href="#marketingD" role="button" data-slide="prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a class="carousel-control-next-btn btn btn-light btn-sm py-1 px-2" href="#marketingD" role="button" data-slide="next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Well done!</h4><p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 quote-panel">
+                    <section class="panel bg-dark text-light mt-1 py-4 px-4">
+                        <div class="carousel panel-body">
+                            <div class="quote text-center">“You can’t connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future.”</div>
+                            <div class="author text-right">Steve Jobs</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row small text-center pt-3 disable-select">
+                <div class="col-12 footer">
+                    <div class="text-muted">Copyright © Your website 2020</div>
+                    <div class="text-muted">Created with <i class="fas fa-heart text-danger"></i> by <a href="http://www.dominikjanak.cz/">Dominik Janák</a>.</div>
+                    <div class="mt-1">
+                        <a href="#">Privacy Policy</a> <span>&bull;</span> <a href="#">Terms &amp; Conditions</a> <span>&bull;</span> <a href="#">GDPR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <a id="back-to-top" href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="vendor/jquery/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jasny-bootstrap/jasny-bootstrap.min.js"></script>
+    <script src="vendor/sweetalert2/sweetalert2.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
